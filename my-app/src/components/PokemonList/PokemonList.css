@@ -1,0 +1,15 @@
+.Pokemon-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.Btn-Btn{
+    margin : 0 auto;
+}
+.start{
+ display: flex;
+ align-items: center;
+}
