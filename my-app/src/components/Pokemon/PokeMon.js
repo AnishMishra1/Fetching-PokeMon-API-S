@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PokeMon = ({image, name}) => {
+const Mon = ({image, name}) => {
   return (
     <div>
         <div>{name}</div>
@@ -9,4 +9,4 @@ const PokeMon = ({image, name}) => {
   )
 }
 
-export default PokeMon
+export default Mon;
