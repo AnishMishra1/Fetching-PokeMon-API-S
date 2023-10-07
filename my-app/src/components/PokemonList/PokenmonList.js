@@ -29,7 +29,7 @@ const PokenmonList = () => {
     async function downloadPokemon() {
 
         //SetIsLoading(true)
-        setPokemonListState({...pokemaonListState,isLoading:true})
+        setPokemonListState((state) => ({...state,isLoading:true}))
 
 
         //this download list of 20 pokemon
