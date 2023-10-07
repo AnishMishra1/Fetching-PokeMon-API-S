@@ -4,25 +4,26 @@ import Mon from '../Pokemon/PokeMon.js';
 import './PokemonList.css'
 import usePokemon from '../../hooks/usePokemon.js';
 
+
 const PokenmonList = () => {
 
     
 
     
-   const { pokemaonListState, setPokemonListState} = usePokemon();
+  const [pokemonListState, setPokemonListState] = usePokemon(false);
     
 
   return (
     <div >
         <div>PokenmonList</div>
         <div className='Pokemon-wrapper'>
-        {(pokemaonListState.isLoading) ? "loading..." : 
-          pokemaonListState.PokenmonList.map((poke) => <Mon name = {poke.name} image ={poke.image} key={poke.id} id={poke.id} />)
+        {(pokemonListState.isLoading) ? "loading..." : 
+          pokemonListState.PokemonList.map((poke) => <Mon name = {poke.name} image ={poke.image} key={poke.id} id={poke.id} />)
         }
         </div>
         <div className='Btn-Btn'>
-        <button disabled = {pokemaonListState.prevUrl == null} onClick={() => setPokemonListState({...pokemaonListState,pokeDexUrl:pokemaonListState.prevUrl})}>Prev</button>
-          <button disabled = {pokemaonListState.nextUrl == null} onClick={() => setPokemonListState({...pokemaonListState,pokeDexUrl:pokemaonListState.nextUrl})}>Next</button>
+        <button disabled = {pokemonListState.prevUrl == null} onClick={() => setPokemonListState({...pokemonListState,pokeDexUrl:pokemonListState.prevUrl})}>Prev</button>
+          <button disabled = {pokemonListState.nextUrl == null} onClick={() => setPokemonListState({...pokemonListState,pokeDexUrl:pokemonListState.nextUrl})}>Next</button>
         </div>
         
     </div>
